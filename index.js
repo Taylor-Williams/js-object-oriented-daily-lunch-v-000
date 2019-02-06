@@ -34,6 +34,16 @@ class Customer{
     this.neighborhoodId = neighborhoodId
     store.customers.push(self)
   }
+  deliveries(){
+    return store.delivies.filter(delivery =>{
+      return delivery.customerId === this.id
+    })
+  }
+  meals(){
+    return this.deliveries().map(delivery =>{
+      return delivery.mealId
+    })
+  }
 }
 class Meal{
   constructor(name){
