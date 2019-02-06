@@ -7,6 +7,7 @@ let deliveryCount = 0
 class Neighborhood{
   constructor(name){
     this.name = name
+    store.neighborhoods.push(self)
   }
 }
 class Delivery{
