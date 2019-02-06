@@ -35,7 +35,7 @@ class Customer{
     return this.deliveries().map(delivery => delivery.meal())
   }
   totalSpent(){
-    total = 0
+    let total = 0
     this.meals().forEach(meal =>{
       total += meal.price
     })
