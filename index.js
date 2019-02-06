@@ -31,9 +31,7 @@ class Customer{
     store.customers.push(this)
   }
   deliveries(){
-    return store.delivies.filter(delivery =>{
-      return delivery.customerId === this.id
-    })
+    return store.deliveries.filter(delivery => delivery.customerId === this.id)
   }
   meals(){
     return this.deliveries().map(delivery =>{
@@ -56,9 +54,7 @@ class Meal{
     store.meals.push(this)
   }
   deliveries(){
-    return store.delivies.filter(delivery =>{
-      return delivery.mealId === this.id
-    })
+    return store.deliveries.filter(delivery => delivery.mealId === this.id)
   }
   customers(){
     allMeals = this.deliveries().map(delivery =>{
