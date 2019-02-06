@@ -17,7 +17,7 @@ class Neighborhood{
     return store.customers.filter(customer => customer.neighborhoodId === this.id)
   }
   meals(){
-    allMeals = this.deliveries().map(delivery =>{
+    const allMeals = this.deliveries().map(delivery =>{
       return delivery.mealId
     })
     return [... new Set (allMeals)]
