@@ -15,9 +15,11 @@ class Neighborhood{
     })
   }
   customers(){
-    return this.deliveries().map(delivery =>{
+    notUnique = this.deliveries().map(delivery =>{
       return delivery.customerId
     })
+    unique = [... new set (notUnique)]
+    return unique
   }
   meals(){
     return this.deliveries().map(delivery =>{
