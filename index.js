@@ -11,6 +11,6 @@ class Neighborhood{
 }
 class Delivery{
   constructor(mealId, neighborhoodId, customerId){
-    
+
   }
 }
