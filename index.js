@@ -7,6 +7,7 @@ let deliveryCount = 0
 class Neighborhood{
   constructor(name){
     this.name = name
+    this.id = neighborhoodCount++
     store.neighborhoods.push(self)
   }
   deliveries(){
@@ -27,9 +28,11 @@ class Neighborhood{
   }
 }
 class Customer{
-  constructor(name){
+  constructor(name, neighborhoodId){
     this.name = name
-    store.neighborhoods.push(self)
+    this.id = customerCount++
+    this.neighborhoodId = neighborhoodId
+    store.customers.push(self)
   }
 }
 class Meal{
