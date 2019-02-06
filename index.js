@@ -44,6 +44,13 @@ class Customer{
       return delivery.mealId
     })
   }
+  totalSpent(){
+    total = 0
+    this.meals().forEach(meal =>{
+      total += meal.price
+    })
+    return total
+  }
 }
 class Meal{
   constructor(name){
