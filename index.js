@@ -11,14 +11,10 @@ class Neighborhood{
     store.neighborhoods.push(this)
   }
   deliveries(){
-    return store.deliveries.filter(delivery =>{
-      return delivery.neighborhoodId === this.id
-    })
+    return store.deliveries.filter(delivery => return delivery.neighborhoodId === this.id)
   }
   customers(){
-    return this.deliveries().map(delivery =>{
-      return delivery.customerId
-    })
+    return store.customers.filter(customer => return customer.neighborhoodId === this.id)
   }
   meals(){
     allMeals = this.deliveries().map(delivery =>{
