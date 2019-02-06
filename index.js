@@ -8,7 +8,7 @@ class Neighborhood{
   constructor(name){
     this.name = name
     this.id = neighborhoodCountId++
-    store.neighborhoods.push(self)
+    store.neighborhoods.push(this)
   }
   deliveries(){
     return store.deliveries.filter(delivery =>{
@@ -32,7 +32,7 @@ class Customer{
     this.name = name
     this.id = customerCountId++
     this.neighborhoodId = neighborhoodId
-    store.customers.push(self)
+    store.customers.push(this)
   }
   deliveries(){
     return store.delivies.filter(delivery =>{
@@ -57,7 +57,7 @@ class Meal{
     this.title = title
     this.price = price
     this.id = mealCountId++
-    store.meals.push(self)
+    store.meals.push(this)
   }
   deliveries(){
     return store.delivies.filter(delivery =>{
@@ -80,7 +80,7 @@ class Delivery{
     this.neighborhoodCountId = neighborhoodCountId
     this.customerId = customerId
     this.id = deliveryCountId++
-    store.deliveries.push(self)
+    store.deliveries.push(this)
   }
   meal(){
     return store.meals[this.mealId]
