@@ -76,6 +76,19 @@ class Meal{
 }
 class Delivery{
   constructor(mealId, neighborhoodId, customerId){
-
+    this.mealId = mealId
+    this.neighborhoodCountId = neighborhoodCountId
+    this.customerId = customerId
+    this.id = deliveryCount++
+    store.deliveries.push(self)
+  }
+  meal(){
+    return store.meals[this.mealId]
+  }
+  customer(){
+    return store.customers[this.customerId]
+  }
+  neighborhood(){
+    return store.neighborhoods[this.neighborhoodId]
   }
 }
