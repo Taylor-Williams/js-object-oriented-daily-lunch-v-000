@@ -70,6 +70,9 @@ class Meal{
     })
     return [... new set (allMeals)]
   }
+  static byprice(){
+    return store.meals.sort((a,b) => a.price - b.price)
+  }
 }
 class Delivery{
   constructor(mealId, neighborhoodId, customerId){
