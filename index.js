@@ -59,6 +59,17 @@ class Meal{
     this.id = mealCount++
     store.meals.push(self)
   }
+  deliveries(){
+    return store.delivies.filter(delivery =>{
+      return delivery.mealId === this.id
+    })
+  }
+  customers(){
+    allMeals = this.deliveries().map(delivery =>{
+      return delivery.customerId
+    })
+    return [... new set (allMeals)]
+  }
 }
 class Delivery{
   constructor(mealId, neighborhoodId, customerId){
