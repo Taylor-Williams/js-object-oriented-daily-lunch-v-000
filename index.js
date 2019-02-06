@@ -9,6 +9,28 @@ class Neighborhood{
     this.name = name
     store.neighborhoods.push(self)
   }
+  deliveries(){
+    return store.deliveries.filter(delivery =>{
+      return delivery.neighborhoodId === this.id
+    })
+  }
+  customers(){
+    return this.deliveries().map(delivery =>{
+      return delivery.customerId
+    })
+  }
+}
+class Customer{
+  constructor(name){
+    this.name = name
+    store.neighborhoods.push(self)
+  }
+}
+class Meal{
+  constructor(name){
+    this.name = name
+    store.neighborhoods.push(self)
+  }
 }
 class Delivery{
   constructor(mealId, neighborhoodId, customerId){
