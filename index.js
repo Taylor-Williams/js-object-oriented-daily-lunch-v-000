@@ -56,7 +56,7 @@ class Meal{
   }
   customers(){
     const allMeals = this.deliveries().map(delivery => delivery.customer())
-    return [... new set (allMeals)]
+    return [... new Set (allMeals)]
   }
   static byprice(){
     return store.meals.sort((a,b) => a.price - b.price)
