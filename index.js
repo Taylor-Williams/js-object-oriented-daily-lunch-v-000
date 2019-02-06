@@ -1,13 +1,13 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
-let neighborhoodCount = 0
-let customerCount = 0
-let mealCount = 0
-let deliveryCount = 0
+let neighborhoodCountId = 0
+let customerCountId = 0
+let mealCountId = 0
+let deliveryCountId = 0
 class Neighborhood{
   constructor(name){
     this.name = name
-    this.id = neighborhoodCount++
+    this.id = neighborhoodCountId++
     store.neighborhoods.push(self)
   }
   deliveries(){
@@ -30,7 +30,7 @@ class Neighborhood{
 class Customer{
   constructor(name, neighborhoodId){
     this.name = name
-    this.id = customerCount++
+    this.id = customerCountId++
     this.neighborhoodId = neighborhoodId
     store.customers.push(self)
   }
@@ -56,7 +56,7 @@ class Meal{
   constructor(title, price){
     this.title = title
     this.price = price
-    this.id = mealCount++
+    this.id = mealCountId++
     store.meals.push(self)
   }
   deliveries(){
@@ -79,7 +79,7 @@ class Delivery{
     this.mealId = mealId
     this.neighborhoodCountId = neighborhoodCountId
     this.customerId = customerId
-    this.id = deliveryCount++
+    this.id = deliveryCountId++
     store.deliveries.push(self)
   }
   meal(){
