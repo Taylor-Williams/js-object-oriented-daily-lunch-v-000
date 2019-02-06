@@ -19,6 +19,11 @@ class Neighborhood{
       return delivery.customerId
     })
   }
+  meals(){
+    return this.deliveries().map(delivery =>{
+      return delivery.mealId
+    })
+  }
 }
 class Customer{
   constructor(name){
