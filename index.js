@@ -53,9 +53,11 @@ class Customer{
   }
 }
 class Meal{
-  constructor(name){
-    this.name = name
-    store.neighborhoods.push(self)
+  constructor(title, price){
+    this.title = title
+    this.price = price
+    this.id = mealCount++
+    store.meals.push(self)
   }
 }
 class Delivery{
