@@ -55,9 +55,7 @@ class Meal{
     return store.deliveries.filter(delivery => delivery.mealId === this.id)
   }
   customers(){
-    allMeals = this.deliveries().map(delivery =>{
-      return delivery.customerId
-    })
+    allMeals = this.deliveries().map(delivery => delivery.customer())
     return [... new set (allMeals)]
   }
   static byprice(){
